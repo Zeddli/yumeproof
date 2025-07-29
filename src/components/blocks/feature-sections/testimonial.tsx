@@ -51,23 +51,23 @@ const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
-        "relative h-48 w-80 cursor-pointer overflow-hidden rounded-xl border p-6 mx-2",
+        "relative h-40 sm:h-48 w-72 sm:w-80 cursor-pointer overflow-hidden rounded-xl border p-4 sm:p-6 mx-2",
         "border-gray-200 bg-white hover:border-[#5995eb] hover:shadow-lg transition-all duration-300"
       )}
     >
       <div className="flex flex-col h-full">
         {/* Name */}
-        <h4 className="font-semibold text-foreground text-sm mb-2">
+        <h4 className="font-semibold text-foreground text-xs sm:text-sm mb-2">
           {testimonial.name}
         </h4>
         
         {/* Rating */}
-        <div className="flex gap-1 mb-4">
+        <div className="flex gap-1 mb-3 sm:mb-4">
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
               className={cn(
-                "w-4 h-4",
+                "w-3 h-3 sm:w-4 sm:h-4",
                 i < testimonial.rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
               )}
             />
@@ -75,7 +75,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] 
         </div>
         
         {/* Review */}
-        <p className="text-sm text-gray-700 leading-relaxed flex-1">
+        <p className="text-xs sm:text-sm text-gray-700 leading-relaxed flex-1">
           &ldquo;{testimonial.review}&rdquo;
         </p>
       </div>
@@ -93,25 +93,25 @@ const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] 
 
 export default function TestimonialsSection() {
   return (
-    <section className="w-full py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+    <section className="w-full py-16 sm:py-20 md:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 max-w-full overflow-hidden">
       <div className="w-full">
         <motion.div 
-          className="text-center mb-16 px-4 md:px-8"
+          className="text-center mb-12 sm:mb-16 px-4 sm:px-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 sm:mb-6">
             What Our Users Say
           </h2>
-          <p className="font-subheading text-xl text-[#5995eb] max-w-2xl mx-auto">
+          <p className="font-subheading text-lg sm:text-xl text-[#5995eb] max-w-2xl mx-auto">
             Trusted by Photographers, Developers & Security Experts
           </p>
         </motion.div>
 
         <div className="relative w-full overflow-hidden rounded-lg">
           {/* First Row - Left to Right */}
-          <div className="flex animate-marquee hover:animate-pause space-x-4 py-4 w-max">
+          <div className="flex animate-marquee hover:animate-pause space-x-3 sm:space-x-4 py-4 w-max">
             {firstRow.map((testimonial) => (
               <TestimonialCard key={testimonial.name} testimonial={testimonial} />
             ))}
@@ -125,7 +125,7 @@ export default function TestimonialsSection() {
           </div>
           
           {/* Second Row - Right to Left */}
-          <div className="flex animate-marquee-reverse hover:animate-pause space-x-4 py-4 w-max">
+          <div className="flex animate-marquee-reverse hover:animate-pause space-x-3 sm:space-x-4 py-4 w-max">
             {secondRow.map((testimonial) => (
               <TestimonialCard key={testimonial.name} testimonial={testimonial} />
             ))}
@@ -139,8 +139,8 @@ export default function TestimonialsSection() {
           </div>
           
           {/* Fade gradients */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
         </div>
       </div>
     </section>

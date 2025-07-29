@@ -12,10 +12,10 @@ import { SimpleFooterWithFourGrids } from '@/components/blocks/footers/simple-fo
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-br from-white via-blue-50 via-blue-100 to-blue-200">
+    <div className="flex min-h-screen flex-col bg-gradient-to-br from-white via-blue-50 via-blue-100 to-blue-200 w-full max-w-full overflow-x-hidden">
       <Navbar />
       <SimpleCentered />
-      <main className="flex-grow">
+      <main className="flex-grow w-full">
         <ProofOfRealDeviceSection/>
         <ProofOfRealImageSection/>
         <VerificationProcess/>
