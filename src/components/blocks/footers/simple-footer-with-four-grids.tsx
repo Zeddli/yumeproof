@@ -54,12 +54,12 @@ export function SimpleFooterWithFourGrids() {
   return (
     <div className="border-t border-neutral-100 dark:border-white/[0.1] px-4 sm:px-8 py-12 sm:py-16 md:py-20 bg-neutral-950 w-full relative overflow-hidden max-w-full">
       <div className="max-w-7xl mx-auto text-sm text-neutral-300 flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start md:px-8 w-full">
-        <div className="w-full sm:w-auto mb-8 sm:mb-0 text-center sm:text-left">
+        <div className="w-full sm:w-auto mb-8 sm:mb-0 text-center sm:text-left" style={{ textAlign: 'center' }}>
           <div className="mr-0 md:mr-4 flex mb-4 justify-center sm:justify-start w-full">
             <Logo />
           </div>
 
-          <div className="mt-2 ml-0 sm:ml-2 text-neutral-400 max-w-xs text-xs sm:text-sm text-center sm:text-left mx-auto sm:mx-0">
+          <div className="mt-2 ml-0 sm:ml-2 text-neutral-400 max-w-xs text-xs sm:text-sm text-center sm:text-left mx-auto sm:mx-0" style={{ textAlign: 'center' }}>
             Proof-of-Concept Android Application for Image Verification
           </div>
         </div>
@@ -130,9 +130,10 @@ const Logo = () => {
   return (
     <Link
       href="/"
-      className="font-normal flex space-x-2 items-center text-sm mr-0 sm:mr-4 text-white px-2 py-1 relative z-20"
+      className="font-normal flex space-x-2 items-center justify-center text-sm mr-0 sm:mr-4 text-white px-2 py-1 relative z-20"
+      style={{ justifyContent: 'center' }}
     >
-      <span className="font-bold text-xl sm:text-2xl text-white">YumeProof</span>
+      <span className="font-bold text-xl sm:text-2xl text-white text-center" style={{ textAlign: 'center' }}>YumeProof</span>
     </Link>
   );
 };
