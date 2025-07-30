@@ -50,6 +50,11 @@ export function SimpleFooterWithFourGrids() {
       title: "Contact Email",
       href: "#team",
     },
+    {
+      title: "X",
+      href: "https://x.com/yumeproof",
+    },
+
   ];
   return (
     <div className="border-t border-neutral-100 dark:border-white/[0.1] px-4 sm:px-8 py-12 sm:py-16 md:py-20 bg-neutral-950 w-full relative overflow-hidden max-w-full">

@@ -18,7 +18,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Victor Mak",
     role: "Software Engineer",
-    description: "Expert in smart contract development and blockchain infrastructure with 8+ years of experience.",
+    description: "Specializes in mobile penetration testing and secure app development across iOS and Android platforms.",
     avatar: "/viktor.jpg",
     linkedin: "https://www.linkedin.com/in/victorevolves/",
     twitter: "https://x.com/victorevolves",
@@ -27,7 +27,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Junaid Javed",
     role: "Software Engineer",
-    description: "Specializes in mobile penetration testing and secure app development across iOS and Android platforms.",
+    description: "Expert in smart contract development and blockchain infrastructure.",
     avatar: "/junaid.jpg",
     linkedin: "https://www.linkedin.com/in/junaid-javed-3a7282235/",
     twitter: "https://x.com/MrJuna1d",
@@ -36,7 +36,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jun Heng",
     role: "Software Engineer",
-    description: "PhD in cryptography with focus on zero-knowledge proofs and advanced encryption protocols.",
+    description: "Specialize in software development and web3 industry.",
     avatar: "/junheng.jpg",
     linkedin: "https://www.linkedin.com/in/jun-heng-teh-6773202b0/",
     twitter: "https://x.com/JNHNG4",
