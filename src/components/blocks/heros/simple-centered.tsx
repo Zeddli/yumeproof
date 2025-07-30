@@ -1,6 +1,7 @@
 'use client'
 
 import Iphone15Pro from "@/components/magicui/iphone-15-pro";
+import { JoinWaitlistButton } from "@/components/form/waitlist-form";
 
 export default function SimpleCentered() {
   return (
@@ -37,6 +38,11 @@ export default function SimpleCentered() {
               <p className="mt-4 sm:mt-6 lg:mt-8 font-body text-sm sm:text-base md:text-lg lg:text-lg text-pretty text-gray-600 max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0">
                 Providing Proof-Of-Real-Image and Proof-Of-Real-Device technology to verify image originality through blockchain-based credentialing and advanced verification protocols.
               </p>
+              
+              {/* Join Waitlist Button */}
+              <div className="flex justify-center lg:justify-start">
+                <JoinWaitlistButton />
+              </div>
             </div>
 
             {/* Right column - Phone showcase (scrolls normally first, then with text) */}
